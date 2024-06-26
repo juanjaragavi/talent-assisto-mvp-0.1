@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./chat.module.css";
 import { AssistantStream } from "openai/lib/AssistantStream";
 import Markdown from "react-markdown";
+import { threadId } from "../assistant-config";
 // @ts-expect-error - no types for this yet
 import { AssistantStreamEvent } from "openai/resources/beta/assistants/assistants";
 import { RequiredActionFunctionToolCall } from "openai/resources/beta/threads/runs/runs";
@@ -63,7 +64,6 @@ const Chat = ({
   const [userInput, setUserInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [inputDisabled, setInputDisabled] = useState(false);
-  const [threadId, setThreadId] = useState("");
 
   // automatically scroll to bottom of chat
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
@@ -73,18 +73,6 @@ const Chat = ({
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-
-  // create a new threadID when chat component created
-  useEffect(() => {
-    const createThread = async () => {
-      const res = await fetch(`/api/assistants/threads`, {
-        method: "POST",
-      });
-      const data = await res.json();
-      setThreadId(data.threadId);
-    };
-    createThread();
-  }, []);
 
   const sendMessage = async (text) => {
     const response = await fetch(
