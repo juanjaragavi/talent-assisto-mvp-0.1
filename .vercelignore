@@ -1,5 +1,9 @@
-node_modules
+.gitignore
+.env
+.env.local
+.vercel
 .next
 .git
+node_modules
 LICENSE
 README.md
