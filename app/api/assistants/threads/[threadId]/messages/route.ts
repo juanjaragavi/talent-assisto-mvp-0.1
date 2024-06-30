@@ -13,6 +13,11 @@ type CustomRequest = Request & {
 export async function POST(request: CustomRequest, {}) {
   const { content } = await request.json();
 
+  await openai.beta.threads.messages.create(threadId, {
+    role: "user",
+    content: content,
+  });
+
   const stream = openai.beta.threads.runs.stream(threadId, {
     assistant_id: assistantId,
   });
