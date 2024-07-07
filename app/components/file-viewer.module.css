@@ -6,7 +6,7 @@
   width: 100%;
   height: 100%;
   padding: 20px;
-  background-color: #efefef;
+  background-color: #f1f8fa;
   overflow: hidden;
   border-radius: 16px;
 }
@@ -29,7 +29,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ececf1;
+  border-bottom: 1px solid #e3f8fe;
   gap: 16px;
   width: 100%;
 }
@@ -39,7 +39,8 @@
 }
 .fileStatus {
   font-size: 0.8em;
-  color: #666;
+  color: #abaaaa;
+  margin-top: 3px;
 }
 
 .fileDeleteIcon {
@@ -53,10 +54,11 @@
 }
 
 .fileUploadBtn {
-  background-color: #000;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(61, 59, 53, 0.16) 0px 0px 0px 1px, rgba(61, 59, 53, 0.08) 0px 2px 5px 0px;
+  background-color: rgb(71, 192, 208);
   color: white;
   padding: 8px 24px;
-  border-radius: 32px;
+  border-radius: 40px;
   text-align: center;
   display: inline-block;
   cursor: pointer;
@@ -69,10 +71,15 @@
 .title {
   font-size: 1.2em;
   font-weight: 600;
+  text-align: center;
 }
 
 .fileName {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.uploadIcon {
+  margin-left: 7px;
 }

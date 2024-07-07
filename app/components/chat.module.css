@@ -17,7 +17,7 @@
   flex-grow: 1;
   padding: 16px 24px;
   margin-right: 10px;
-  border-radius: 60px;
+  border-radius: 40px;
   border: 2px solid transparent;
   font-size: 1em;
   background-color: #efefef;
@@ -31,15 +31,20 @@
 
 .button {
   padding: 8px 24px;
-  background-color: #000;
+  background-color: rgb(71, 192, 208);
   color: white;
   border: none;
   font-size: 1em;
-  border-radius: 60px; /* Removed duplicate border-radius property */
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(61, 59, 53, 0.16) 0px 0px 0px 1px, rgba(61, 59, 53, 0.08) 0px 2px 5px 0px;
 }
 
 .button:disabled {
   background-color: lightgrey;
+}
+
+.sendIcon {
+  margin-left: 5px;
 }
 
 .messages {
