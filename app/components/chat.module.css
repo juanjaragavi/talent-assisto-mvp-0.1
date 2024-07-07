@@ -25,7 +25,7 @@
 
 .input:focus {
   outline: none !important;
-  border-color: #000;
+  border-color: #0d515a;
   background-color: white;
 }
 
@@ -77,7 +77,7 @@
 .userMessage {
   align-self: flex-end;
   color: #fff;
-  background-color: #000;
+  background-color: #0d515a;
 }
 
 .assistantMessage {

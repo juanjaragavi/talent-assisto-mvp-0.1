@@ -5,7 +5,7 @@ import { assistantId } from "./assistant-config";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "TalentAssisto | Your smart right hand",
+  title: "TalentAssisto | Your Smart Right Hand",
   description: "TalentAssisto makes it easy to create generative AI-powered HR agents optimized for HR tasks.",
   icons: {
     icon: "/openai.svg"

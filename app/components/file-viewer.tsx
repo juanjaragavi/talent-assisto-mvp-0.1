@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./file-viewer.module.css";
+import Image from "next/image";
 
 const TrashIcon = () => (
   <svg
@@ -56,13 +57,24 @@ const FileViewer = () => {
 
   return (
     <div className={styles.fileViewer}>
+      Hi, Welcome to
+      <Image
+        className={styles.talentAssistoLogo}
+        src="https://media.sebas.pro/talentassisto-logo.svg"
+        alt="TalentAssisto Logo"
+        width={250}
+        height={40}
+      />
       <div
         className={`${styles.filesList} ${
           files.length !== 0 ? styles.grow : ""
         }`}
       >
         {files.length === 0 ? (
-          <div className={styles.title}>Attach files to start chatting with your Document, or to add knowledge to your Assistant.</div>
+          <div className={styles.title}>
+            Attach files to start chatting with your Document, or to add
+            knowledge to your Assistant.
+          </div>
         ) : (
           files.map((file) => (
             <div key={file.file_id} className={styles.fileEntry}>
