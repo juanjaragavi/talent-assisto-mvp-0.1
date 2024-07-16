@@ -57,7 +57,7 @@ const FileViewer = () => {
 
   return (
     <div className={styles.fileViewer}>
-      Hi, Welcome to
+      Welcome to
       <Image
         className={styles.talentAssistoLogo}
         src="https://media.sebas.pro/talentassisto-logo.svg"
