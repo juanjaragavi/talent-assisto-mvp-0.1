@@ -72,8 +72,8 @@ const FileViewer = () => {
       >
         {files.length === 0 ? (
           <div className={styles.title}>
-            Attach files to start chatting with your Document, or to add
-            knowledge to your Assistant.
+            Attach documents to start a Document Q&A or to add knowledge to your
+            Assistant.
           </div>
         ) : (
           files.map((file) => (
