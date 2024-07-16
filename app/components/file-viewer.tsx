@@ -72,7 +72,7 @@ const FileViewer = () => {
       >
         {files.length === 0 ? (
           <div className={styles.title}>
-            Attach documents to start a Document Q&A or to add knowledge to your
+            Attach files to start a Document Q&A or to add knowledge to your
             Assistant.
           </div>
         ) : (
